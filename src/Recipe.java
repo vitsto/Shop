@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.Objects;
 
 public class Recipe {
@@ -12,8 +13,8 @@ public class Recipe {
 
     public double getCost() {
         if (Double.compare(cost, 0) == 0) {
-            for (Product p : products.getProducts()) {
-                cost += p.getPrice();
+            for (Map.Entry<Product, Integer> product : products.getProducts().entrySet()) {
+                cost += product.getKey().getPrice() * product.getValue();
             }
         }
         return cost;

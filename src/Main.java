@@ -7,7 +7,7 @@ public class Main {
         Product cucumber = new Product("Огурец", 190, 1);
 
         ProductList productList = new ProductList();
-        productList.addProduct(banana);
+        productList.addProduct(banana, 2);
         productList.addProduct(cucumber);
         productList.addProduct(potato);
 
